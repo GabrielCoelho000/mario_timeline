@@ -1,0 +1,98 @@
+==================> Iniciar <================
+
+Para iniciar o git em uma pasta nova:
+
+===> Entre na pasta alvo;
+===> Clique com o botão direito do mouse e selecione a opção:
+        
+        -   "Git Bash Here";
+
+===> Ao entrar no git escreva dentro dele: 
+        
+        -   "git init", assim sua pasta já estará inicializada com o Git, os arquivos estaram escodindos na pasta alvo;
+
+===> Para começar a versionar o código, escreva:
+        
+        -   "git status", com o relatório que irá aparecer você saberá qual arquivo versionar;
+
+===> Os arquivos que estiverem em vermelho não foram adicionados, para adicionar um unico arquivo use o codigo : "git add" e entre aspas o nome em vermelho "exemplo.txt";
+
+===> Você também pode usar outra linha de codigo para adicionar todos os arquivos que ainda não foram adicionados, com o codigo: git add .". Essa linha adicionará todos os itens em vermelho;
+
+===> Após isso, use "git status" para verificar se todos os itens foram adicionados. Esses itens apareceram na cor verde;
+
+===> Commit é a versão, como esses arquivos ainda não foram commitados para o GitHub, você precisará seguir os seguintes passos:
+
+        -   "git config --global user.email "your@exemple.com"" (para novos usuários);
+        -   "git config --global user.name "Your name",pois seu nome estará atrelado à versao do codigo;
+        -   Agora sim! Seu git foi configurado e vc retorna a linha inicial que é: O linha de codigo "git commit        -  "mensagem do que foi implementado nessa nova versão ou commit initial";
+
+===> Vamos atrelar os arquivos ao seu GitHub, pois é necessário para poder empurar(push) esse commit na nuvem;
+
+        -   git remote add origin https://github.com/GabrielCoelho000/mario_timeline, foi definito para onde o codigo deve ser enviado;
+        -   git push --set-upstream origin master
+
+
+==================> Versionar         <==============
+
+===> Ao modificar o seu código:
+        
+        -   git add .;
+        -   git commit "o que vc modificou"
+        -   git push
+
+==================> Histórico         <==============
+
+===> Para verificar quais versões foram feitas siga abaixo as instruções, o commit superior sempre será a versão mais atual
+        
+        -   git relog
+
+==================> Retornar o Código <======
+
+===>  Para retornar, localmente, o seu código anterior.
+        
+        -   git reset --hard 1658aa4 <=== númemro corrsponde a qual versão vc deseja retorna - ele fica ao lado de HEAD)
+
+==================> Branch            <================= 
+===> Branchs são galhos de um tronco master. Ou seja, são um meio de escrever paralelmente um código sem alterar inicialmente a tronco master, levando a este apenas cogidos que funcionem
+
+        - git branch <=== Lista quais são as branchs disponiveis
+        - git branch staging <=== Esse "staging" é a nova branch que está sendo criada, você pode dar o nome que desejar, esse nome , no emntanto é apenas uma prática
+
+===> Um asteristico (*) ao lado da branch sinaliza qual branch está sendo selecionada para ser modificada
+
+        - git checkout staging <=== Esse comando seleciona a branch desejada, que nesse caso é: staginng
+
+==================> Merge              <================== 
+
+===> É uma funcionalidade que mescla o que foi alterado na branch staging para a master
+
+        - git pull            <=== 1° Trazer do servidor a versão mais atualizada da branch master
+        - git branch staging  <=== 2° Gerar uma nova branch a partir da principal
+        - ---                 <=== 3° Finalizar o trabalho na branch temporaria
+        - git checkout master <=== 4° Entrar na master
+        - git pull            <=== 5° 
+        - git merge staging   <=== 6° Usar esse codigo para mesclar o que está em staging para master
+        - git push            <=== 7° Empurar o merge para o branch 
+
+        - git pull 
+        - git checkout - b staging master <=== em uma unica linha é possivel criar uma branch a partir da original
+
+
+ =============> Pull Request <=======
+ ===> É o processo em que é enviado seu codigo para aprovação de outro programador para haver certza que seu codigo esta funcionarl
+        
+        - git branch checkout staging
+        - git add . <=== para o codigo que vc acabou de criar
+        - git commit -m "" <=== Cpm  nom eque vc acabou de criar
+        - git push
+        - Entrar no GitHub,
+        - Selecionar COmpare e Pull Request do arquivo enviadp
+        - descrever as atulkuzações
+
+===========> Git Ignore <=======
+===> Processo que ignora alguns arquisvos que nao se deseja enviar
+
+        - touch .gitignore <=== cria um arquivo txt do que ignorar
+        - escreva o caminho do arquivo que vc quer ignorar <=== Ignora tudo qu eesta la dentro 
+        - adicionar e comitar o .ingnore 
