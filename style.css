@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family: "impact", sans-serif;
+}
+
+main
+{
+    width: 4546px;
+    height: 100vh;
+
+    display: flex;
+
+}
+
+.container
+{
+    position: relative;
+    
+    width: 529px;;
+    height: 803px;
+
+    overflow: hidden;
+
+
+}
+
+.poster_container
+{
+    position: absolute;
+    top: 174px;
+    right: 23px;
+
+    width: 203px;
+    height: 293px;
+
+    background-color: yellowgreen;
+
+    transition: 0.5s;
+}
+
+.poster_container img
+{
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+}
+
+.title_container
+{
+    position: relative;
+
+    width: 132px;
+    height: 98px;
+    top: 265px;
+    right: -100px;
+
+    overflow: hidden;
+}
+
+h1
+{
+    position: absolute;
+    
+    top: 183px;
+
+
+    font-size: 63px;
+
+    color: #0d8445;
+    
+}
+
+h1::before
+{
+    content: "Super Mario";
+    font-size: 13px;
+
+    position: absolute;
+    top: -12px;
+    right: 75px;
+}
+
+.h-19, .h-85
+{
+    position: absolute;
+
+    font-size: 47pt;
+    color: #fff;
+}
+
+.h-19
+{
+    position: absolute;
+    top: -15px;
+    right: 0px;
+}
+
+.h-85
+{
+    position: absolute;
+    top: 39px;
+    right: 0px;
+
+}
+
+.med_background
+{
+    position: absolute;
+    top: 266px;
+    z-index: -1;
+
+    width: 100%;
+    height: 112px;
+
+    background-color: #0d8445;
+
+}
+
+.med_background img
+{
+    position: absolute;
+    bottom: 0;
+
+    box-shadow: 0px -15px 25px rgba(0,0,0,0.5);
+}
+
+.ground 
+{
+    position: absolute;
+    bottom: -251px;
+}
+
+.gift img
+{
+    position: absolute;
+    bottom: 105px;
+
+    width: 56px;
+}
+
+.sprite
+{
+    position: relative;
+    width: 150px;
+    top: 450px;
+}
+.sprite img
+{
+position: absolute;
+
+width: 100%;
+}
+
+/* Inicio da Camada Overlay*/
+
+.overlay
+{
+    position: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+    background : rgba(13, 132, 69,0.5);
+    z-index: 7;
+}
+
+.main_overlay
+{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+
+    width: 995px;
+    height: 468px;
+
+}
+
+.poster_overlay
+{
+    width: 323px;
+    height: 468px;
+}
+.poster_overlay img 
+{
+    width: 100%;
+    height: 100%;
+}
+
+.context_overlay
+{
+
+
+    width: 649px;
+    height: 468px;
+
+}
+
+.context_overlay .title_content_overlay
+{
+    width: 100%;
+    height: 95px;
+}
+
+.context_overlay .explain_content_overlay
+{
+    width: 649px;
+    height: 80%;
+    background-color: rgb(255, 255, 255);
+}
+
+.explain_content_overlay
+{
+    padding: 27px;
+}
+
+.white_screen
+{
+    position:fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+
+    z-index: 6;
+}
+
+.white_screen img
+{
+    position: absolute;
+    bottom: 0;
+}
+.overlay p, .overlay strong
+{
+    font-family: poppins , sans-serif;
+
+}
