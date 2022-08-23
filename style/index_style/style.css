@@ -15,7 +15,7 @@ main
     height: 100vh;
 
     display: flex;
-
+    
 }
 
 .container
@@ -26,8 +26,6 @@ main
     height: 803px;
 
     overflow: hidden;
-
-
 }
 
 .poster_container
@@ -35,12 +33,12 @@ main
     position: absolute;
     top: 174px;
     right: 23px;
-
+    
     width: 203px;
     height: 293px;
-
+    
     background-color: yellowgreen;
-
+    
     transition: 0.5s;
 }
 
@@ -48,49 +46,58 @@ main
 {
     width: 100%;
     height: 100%;
-
+    
     cursor: pointer;
-}
-
-.title_container
-{
-    position: relative;
-
-    width: 132px;
-    height: 98px;
-    top: 265px;
-    right: -100px;
-
-    overflow: hidden;
 }
 
 h1
 {
     position: absolute;
-    
     top: 183px;
-
-
     font-size: 63px;
-
     color: #0d8445;
-    
 }
 
 h1::before
 {
     content: "Super Mario";
     font-size: 13px;
-
     position: absolute;
     top: -12px;
     right: 75px;
 }
 
+.med_background
+{
+    position: absolute;
+    top: 266px;
+    z-index: -1;
+    width: 100%;
+    height: 112px;
+    background-color: #0d8445;
+}
+
+.med_background img
+{
+    position: absolute;
+    bottom: 0;
+
+    box-shadow: 0px -15px 25px rgba(0,0,0,0.5);
+}
+
+.title_container
+{
+    position: relative;
+    width: 132px;
+    height: 98px;
+    top: 265px;
+    right: -100px;
+    overflow: hidden;
+}
+
 .h-19, .h-85
 {
     position: absolute;
-
     font-size: 47pt;
     color: #fff;
 }
@@ -110,25 +117,11 @@ h1::before
 
 }
 
-.med_background
+.gift img
 {
     position: absolute;
-    top: 266px;
-    z-index: -1;
-
-    width: 100%;
-    height: 112px;
-
-    background-color: #0d8445;
-
-}
-
-.med_background img
-{
-    position: absolute;
-    bottom: 0;
-
-    box-shadow: 0px -15px 25px rgba(0,0,0,0.5);
+    bottom: 105px;
+    width: 56px;
 }
 
 .ground 
@@ -137,37 +130,38 @@ h1::before
     bottom: -251px;
 }
 
-.gift img
-{
-    position: absolute;
-    bottom: 105px;
-
-    width: 56px;
-}
-
 .sprite
 {
     position: relative;
     width: 150px;
     top: 450px;
 }
+
 .sprite img
 {
 position: absolute;
-
 width: 100%;
 }
 
 /* Inicio da Camada Overlay*/
 
+/*Esses codigos escondem o Overlay*/
+#overlay_hide
+{
+    display: none;
+}
+
+#white_screen_hide
+{
+    display: none;
+}
+
 .overlay
 {
     position: fixed;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 100vw;
     height: 100vh;
     background : rgba(13, 132, 69,0.5);
@@ -179,10 +173,8 @@ width: 100%;
     display: flex;
     justify-content: space-between;
     align-items:center;
-
     width: 995px;
     height: 468px;
-
 }
 
 .poster_overlay
@@ -198,11 +190,8 @@ width: 100%;
 
 .context_overlay
 {
-
-
     width: 649px;
     height: 468px;
-
 }
 
 .context_overlay .title_content_overlay
@@ -210,6 +199,16 @@ width: 100%;
     width: 100%;
     height: 95px;
 }
+
+.title_content_overlay h1
+{
+    position: absolute;
+    top: 70px;
+    left: 210px;
+    font-size: 63px;
+    color: #0d8445;
+}
+
 
 .context_overlay .explain_content_overlay
 {
@@ -229,7 +228,6 @@ width: 100%;
     width: 100vw;
     height: 100vh;
     background-color: #fff;
-
     z-index: 6;
 }
 
@@ -241,5 +239,4 @@ width: 100%;
 .overlay p, .overlay strong
 {
     font-family: poppins , sans-serif;
-
 }
