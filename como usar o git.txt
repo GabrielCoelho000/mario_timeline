@@ -96,3 +96,4 @@ Para iniciar o git em uma pasta nova:
         - touch .gitignore <=== cria um arquivo txt do que ignorar
         - escreva o caminho do arquivo que vc quer ignorar <=== Ignora tudo qu eesta la dentro 
         - adicionar e comitar o .ingnore 
+---
