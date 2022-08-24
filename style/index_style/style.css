@@ -154,12 +154,7 @@ width: 100%;
 /* Inicio da Camada Overlay*/
 
 /*Esses codigos escondem o Overlay*/
-#overlay_hide
-{
-    display: none;
-}
-
-#white_screen_hide
+#overlay_hide,#white_screen_hide
 {
     display: none;
 }
